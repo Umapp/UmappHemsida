@@ -6,8 +6,7 @@
     "dependencies": {
         "express": "*",
         "http": "*",
-        "path": "*"
-    },
-    "author": "",
-    "license": "ISC"
+        "path": "*",
+        "body-parser": "*"
+    }
 }
