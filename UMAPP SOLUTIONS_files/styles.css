@@ -1,0 +1,69 @@
+html, body {
+  font-family: 'Raleway'; }
+
+.wrapper {
+  margin: 0 auto; }
+
+.main-header {
+  position: fixed;
+  margin: 1.5em 0 1.5em 0;
+  width: 100%;
+  height: 40px; }
+
+.nav {
+  margin: 0 50px 0 50px;
+  float: none;
+  text-align: center; }
+  .nav a {
+    color: #34314c;
+    margin-left: 2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    float: right;
+    transition: color .15s ease-in-out,opacity .15s ease-in-out,background .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out; }
+    .nav a:hover {
+      color: #47b8e0; }
+
+.content {
+  margin: 0;
+  padding: 0; }
+
+.banner {
+  height: 100vh;
+  background-image: url("../img/banner2.png");
+  background-size: cover; }
+  .banner .title {
+    left: 20%;
+    top: 260px;
+    margin: 0;
+    position: relative;
+    padding-left: 50px; }
+    .banner .title h1 {
+      font-size: 55px; }
+    .banner .title h2 {
+      padding-top: 0.3em;
+      font-size: 30px; }
+
+.customers {
+  background-color: #f4f4f4; }
+  .customers ul li {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    float: left;
+    width: 33.33333333333333333333%;
+    height: 300px; }
+    .customers ul li a {
+      display: block; }
+
+.project {
+  height: 400px;
+  background-color: red; }
+
+.about {
+  height: 300px;
+  background-color: green;
+  margin-top: 600px; }
+
+.contact {
+  height: 200px;
+  background-color: yellow; }
