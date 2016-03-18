@@ -1,3 +1,14 @@
+.btn {
+  border-radius: 0;
+  border: 0;
+  padding: 15px; }
+
+.btn-primary {
+  background-color: #34314c; }
+  .btn-primary:hover {
+    background-color: #47b8e0;
+    transition: 0.2s ease-in-out; }
+
 html, body {
   font-family: 'Raleway'; }
 
@@ -15,6 +26,9 @@ html, body {
   margin: 0 100px 0 100px;
   float: none;
   text-align: center; }
+  @media screen and (max-width: 768px) {
+    .nav {
+      display: none; } }
   .nav a {
     color: #34314c;
     margin-left: 2em;
@@ -33,64 +47,123 @@ html, body {
   height: 100vh;
   position: relative;
   position: top center;
-  background-image: url("../img/banner2.png");
+  background-image: url("../img/umappbanner2.png");
   background-size: cover;
-  background-position: top-center;
+  background-position: bottom-center;
   background-attachment: fixed; }
+  @media (max-width: 1024px) {
+    .banner {
+      background-image: url("../img/umappbanner2.png");
+      background-repeat: no-repeat;
+      background-position: relative;
+      size: 100% auto;
+      position: relative;
+      background-attachment: scroll;
+      background-position: center; } }
   .banner .title {
-    left: 20%;
+    visibility: hidden;
     top: 260px;
-    margin: 0;
+    margin: 0 auto;
     position: relative;
-    padding-left: 50px;
-    color: #34314c; }
+    color: #34314c;
+    color: #47b8e0;
+    color: #ffc952; }
     .banner .title h1 {
       font-size: 55px; }
+      @media screen and (max-width: 425px) {
+        .banner .title h1 {
+          font-size: 40px; } }
     .banner .title h2 {
       padding-top: 0.3em;
       font-size: 30px; }
 
-.customers {
-  background-color: #f4f4f4; }
-  .customers ul li {
+.app, .webapp {
+  background-color: white; }
+  .app .text-container, .webapp .text-container {
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 25%;
+    margin-bottom: 25%; }
+  .app p, .webapp p {
+    margin-top: 12px;
+    font-size: 20px;
+    line-height: 23px; }
+  .app h2, .webapp h2 {
+    font-size: 35px; }
+  .app .btn, .webapp .btn {
+    margin-top: 10px; }
+  .app .img-container, .webapp .img-container {
+    text-align: center; }
+    .app .img-container img, .webapp .img-container img {
+      padding-top: 45px;
+      padding-bottom: 45px;
+      height: 500px;
+      width: auto; }
+  .app ul li, .webapp ul li {
     margin-left: 0 !important;
     margin-right: 0 !important;
     float: left;
     width: 33.33333333333333333333%;
+    height: auto;
     transform: scale(1);
     transition: all 0.1s ease-in-out; }
-    .customers ul li:hover {
+    .app ul li:hover, .webapp ul li:hover {
       transform: scale(1.1); }
-    .customers ul li a {
+    .app ul li a, .webapp ul li a {
       display: block; }
+    .app ul li img, .webapp ul li img {
+      margin: 0 auto;
+      width: 100%;
+      height: auto;
+      padding: 70px; }
+
+.webapp {
+  background-color: #f4f4f4;
+  width: 100%; }
+  .webapp .btn {
+    margin-top: 20px; }
+  .webapp img {
+    float: left;
+    height: 400px !important; }
 
 .project {
   height: 400px;
   background-color: red; }
 
 .about {
-  min-height: 100px;
   background-color: #fff;
-  overflow: hidden; }
-  .about .content {
-    width: 50%;
-    float: left; }
-    .about .content .content-image {
-      height: 70%;
-      padding: 50px 100px 50px 100px; }
-      .about .content .content-image img {
-        width: 100%;
-        height: auto; }
-    .about .content .content-body {
-      padding: 50px 100px 50px 100px; }
-    .about .content p {
-      display: inline-block;
-      vertical-align: middle;
-      line-height: normal; }
-    .about .content h2 {
-      font-size: 30px;
-      padding-bottom: 10px; }
+  overflow: hidden;
+  color: #34314c; }
+  .about h2 {
+    font-size: 35px; }
+  .about p {
+    margin-top: 12px;
+    font-size: 20px; }
+  .about .col-xs-12 {
+    padding-bottom: 50px;
+    padding-top: 50px;
+    margin: 0 auto; }
+  .about .text-container {
+    min-height: 0px; }
+  .about .image-container {
+    padding: 0;
+    text-align: center; }
+    .about .image-container img {
+      max-height: 300px;
+      width: auto;
+      transform: scale(1);
+      transition: 0.4s ease-in-out; }
+      .about .image-container img:hover {
+        transform: scale(1.02);
+        transition: 0.2s ease-in-out; }
 
 .contact {
-  height: 200px;
-  background-color: yellow; }
+  background-color: #34314c;
+  color: white;
+  line-height: 25px; }
+  .contact .contact-container {
+    padding: 80px 0 60px 0; }
+
+@media screen and (max-width: 530px) {
+  .content {
+    width: 500px; } }

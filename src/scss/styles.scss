@@ -19,10 +19,14 @@ html, body{
 	width:100%;
 	height:40px;
 	z-index:5;
+    
 
 }
 
 .nav {
+        @media screen and(max-width:768px){
+            display:none;
+        }
 	margin: 0 100px 0 100px;
 	float:none;
 	text-align: center;
@@ -50,43 +54,98 @@ html, body{
 	//background-color:blue;
 	position:relative;
 	position:top center;
-	background: {image: url("../img/banner2.png");
+    background: {image: url("../img/umappbanner2.png");
 		size:cover;
-		position: top-center;
+		position: bottom-center;
 		attachment:fixed;
 	}
+    @media (max-width:1024px){
+        background-image: url("../img/umappbanner2.png");
+        background-repeat: no-repeat;
+        background-position: relative;
+        size:100% auto;
+        position: relative;
+        background-attachment:scroll; 
+        background-position: center;
+        //background-attachment: scroll;
+    }
+    
+	
 
 	//background-image: url("../img/banner2.png");
 	//background-size:cover;
 	//attachment: fixed;
 
 	.title{
-		left:20%;
-		top:260px;
-		margin:0;
-		position:relative;
-		padding-left:50px;
+        visibility: hidden;
+        top: 260px;
+        margin: 0 auto;
+        position: relative;
+        //width: 500px;
 		color:$primary;
+        color:$primary_highlight;
+        color:$secondary;
+        
 		h1{
+            
 			font-size:55px;
+            @media screen and(max-width:425px){
+            font-size:40px;
+        }
 		}
 		h2{
 			padding-top:0.3em;
 			font-size:30px;
 		}
+
+            
+        }
 	}
 
-}
 
-.customers{
-	background-color:#f4f4f4;
+        
+
+.app, .webapp{
+	background-color:white;
+    //height:500px;
+    
+    .text-container{
+        display:inline-block;
+        margin:0 auto;
+        margin-top: 25%;
+        margin-bottom:25%;
+    }
+    p{
+        margin-top: 12px;
+    font-size: 20px; 
+        line-height:23px;
+    }
+    h2{
+        font-size:35px;
+    }
+    .btn{
+        margin-top:10px;
+    }
+       
+    
+    
+    .img-container{
+        text-align:center;
+        img{
+            padding-top:45px;
+            padding-bottom:45px;
+            height:500px;
+            width:auto;
+        }
+    }
+    
 	ul{
 		li{
 			margin-left:0 !important;
 			margin-right:0 !important;
 			float:left;
 			width:33.33333333333333333333%;
-			//height:300px;
+			height:auto;
 			transform: scale(1);
 			transition:all 0.1s ease-in-out;
 
@@ -98,9 +157,28 @@ html, body{
 			a{
 				display:block;
 			}
+            img{
+                margin:0 auto;
+                width:100%;
+                height:auto;
+                padding:70px;
+            }
 
 		}
 	}
+}
+
+.webapp{
+    background-color:#f4f4f4;
+    width:100%; 
+    .btn{
+        margin-top:20px;
+        }
+    
+    img{
+        float:left;
+        height:400px !important;
+    }
 }
 .project{
 	height:400px;
@@ -108,46 +186,59 @@ html, body{
 
 }
 .about{
-	min-height:100px;
 	background-color:$white;
 	overflow:hidden;
+    color:$primary;
+    
+    h2{
+        font-size:35px;
+    }
+    p{
+        margin-top:12px;
+        font-size:20px
+    }
+    .col-xs-12{
+        padding-bottom:50px;
+        padding-top:50px;
+        margin:0 auto;
+        
+    }
+    
+    .text-container{
+        min-height:0px;
+    }
+    
+    .image-container{
+        padding: 0;
+        text-align:center;
+        
+        img{
+            max-height:300px;
+            width:auto;
+            transform: scale(1);
+            transition: 0.4s ease-in-out;
+            &:hover{
+                transform:scale(1.02);
+                transition: 0.2s ease-in-out;
+            }
+            
+        }
+    }
+   
+}
 
-	.content{
-
-		width:50%;
-		float:left;
-
-	.content-image{
-		height:70%;
-		padding:50px 100px 50px 100px;
-		//margin-right: 70px;
-		//padding-top: 70px;
-		img{
-			width: 100%;
-    	height: auto;
-		}
-	}
-
-	.content-body{
-			padding:50px 100px 50px 100px;
-	}
-
-
-		p{
-			display: inline-block;
-  		vertical-align: middle;
-  		line-height: normal;
-		}
-		h2{
-			font-size:30px;
-			padding-bottom:10px;
-		}
-	}
-
+.contact{
+	background-color:$primary;
+    color:white;
+    line-height:25px;
+    .contact-container{
+        padding:80px 0 60px 0;
+    }
 }
 
 
-.contact{
-	height:200px;
-	background-color:yellow;
+@media screen and(max-width:530px){
+    .content{
+        width:500px;
+    }
 }

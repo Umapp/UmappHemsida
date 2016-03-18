@@ -1,0 +1,13 @@
+.btn{
+    border-radius: 0;
+    border:0;
+    padding:15px;
+}
+
+.btn-primary{
+    background-color:$primary;
+    &:hover{
+        background-color:$primary_highlight;
+        transition: 0.2s ease-in-out;
+    }
+}

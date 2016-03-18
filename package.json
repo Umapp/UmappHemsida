@@ -1,12 +1,15 @@
 {
-    "name": "umappsite",
-    "version": "1.0.0",
-    "description": "",
-    "main": "server.js",
-    "dependencies": {
-        "express": "*",
-        "http": "*",
-        "path": "*",
-        "body-parser": "*"
-    }
+  "name": "umappsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "*",
+    "http": "*",
+    "path": "*",
+    "body-parser": "*"
+  },
+  "devDependencies": {
+    "lite-server": "^2.1.0"
+  }
 }
