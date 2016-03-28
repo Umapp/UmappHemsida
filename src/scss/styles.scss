@@ -1,244 +1,229 @@
-@import "_variables.scss";
-@import "_buttons";
+$white:#ffffff;
 
 html, body{
-	//margin: 0 auto;
-	//padding: 0;
-	font-family:'Raleway';
+	margin: 0 auto;
+	padding: 0;
+	overflow-x: hidden;
+	font-family:'Poppins';
 }
 
-.wrapper{
-	//width:700px;
-	margin:0 auto;
-}
-
-.main-header{
-	position:fixed;
-	margin: 1.5em 0 1.5em 0;
-	//box-shadow: rgba(0,0,0,0.09) 0 1px;
-	width:100%;
-	height:40px;
-	z-index:5;
-    
-
-}
-
-.nav {
-        @media screen and(max-width:768px){
-            display:none;
-        }
-	margin: 0 100px 0 100px;
-	float:none;
-	text-align: center;
-	a{
-		color:$primary;
-		margin-left:2em;
-		text-transform:uppercase;
-		text-decoration: none;
-		float:right;
-		transition: color .15s ease-in-out,opacity .15s ease-in-out,background .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
-
-		&:hover{
-			color:$primary_highlight;
-		}
-	}
-}
-
-.content{
-	margin:0;
-	padding:0;
+h1,h2,h3,h4,h5{
+	font-family: 'Poppins';
 }
 
 .banner{
-	height:100vh;
-	//background-color:blue;
-	position:relative;
-	position:top center;
-    background: {image: url("../img/umappbanner2.png");
-		size:cover;
-		position: bottom-center;
-		attachment:fixed;
-	}
-    @media (max-width:1024px){
-        background-image: url("../img/umappbanner2.png");
-        background-repeat: no-repeat;
-        background-position: relative;
-        size:100% auto;
-        position: relative;
-        background-attachment:scroll; 
-        background-position: center;
-        //background-attachment: scroll;
-    }
-    
-	
+	width:100%;
+	height:800px;
+	background: url('../../public/img/umappbanner.png') no-repeat center center;
+	background-size:cover;
+	float:left;
+	padding-top:1em;
 
-	//background-image: url("../img/banner2.png");
-	//background-size:cover;
-	//attachment: fixed;
+	.wrapper{
 
-	.title{
-        visibility: hidden;
-        top: 260px;
-        margin: 0 auto;
-        position: relative;
-        //width: 500px;
-		color:$primary;
-        color:$primary_highlight;
-        color:$secondary;
-        
-		h1{
-            
-			font-size:55px;
-            @media screen and(max-width:425px){
-            font-size:40px;
-        }
-		}
-		h2{
-			padding-top:0.3em;
-			font-size:30px;
-		}
-
-            
-        }
 	}
 
+	.text-wrapper{
+		padding-top:150px;
+		padding-left: 100px;
+		padding-right:100px;
+		color:white;
+	}
 
-        
-
-.app, .webapp{
-	background-color:white;
-    //height:500px;
-    
-    .text-container{
-        display:inline-block;
-        margin:0 auto;
-        margin-top: 25%;
-        margin-bottom:25%;
-    }
-    p{
-        margin-top: 12px;
-    font-size: 20px; 
-        line-height:23px;
-    }
-    h2{
-        font-size:35px;
-    }
-    .btn{
-        margin-top:10px;
-    }
-       
-    
-    
-    .img-container{
-        text-align:center;
-        img{
-            padding-top:45px;
-            padding-bottom:45px;
-            height:500px;
-            width:auto;
-        }
-    }
-    
 	ul{
+		font-size:1.2em;
+		color:$white;
+		text-align:right;
+
 		li{
-			margin-left:0 !important;
-			margin-right:0 !important;
-			float:left;
-			width:33.33333333333333333333%;
-			height:auto;
-			transform: scale(1);
-			transition:all 0.1s ease-in-out;
 
-			&:hover{
-				transform:scale(1.1);
-
+			margin-left:3em;
+			display:inline;
+			&:first-child{
+				margin-left:0;
 			}
+		}
+	}
 
-			a{
-				display:block;
-			}
-            img{
-                margin:0 auto;
-                width:100%;
-                height:auto;
-                padding:70px;
-            }
-
+	.logo{
+		width:120px;
+		height:60px;
+		display:table;
+		border:3px $white solid;
+		text-align: center;
+		h3{
+			display:table-cell;
+			color:$white;
+			vertical-align: middle;
 		}
 	}
 }
 
-.webapp{
-    background-color:#f4f4f4;
-    width:100%; 
-    .btn{
-        margin-top:20px;
-        }
-    
-    img{
-        float:left;
-        height:400px !important;
-    }
+.description{
+	.picture, .text{
+		height:400px;
+	}
+	.picture{
+		background:url('../../public/img/People.png') no-repeat center center;
+	}
+	.text{
+		text-align:center;
+		font: 'Yantramanav'
+	}
+	.text-wrapper{
+		padding: 10px 0;
+		height:100%;
+		position: relative;
+	}
+	h2,p{
+		padding:0 40px;
+	}
+	p{
+		padding-top:15px;
+		font-size:0.9em;
+	}
+	.contactbutton{
+		display:table;
+		border: 3px solid black;
+		width:200px;
+		height:50px;
+		float:none;
+		margin-left: auto;
+		margin-right:auto;
+		bottom:25px;
+		left: 0;
+		right:0;
+		position:absolute;
+		&:hover{
+			cursor:pointer;
+		}
+		h3{
+			vertical-align: middle;
+			display:table-cell;
+			font-size:1.4em;
+		}
+	}
 }
-.project{
-	height:400px;
-	background-color:red;
 
-}
-.about{
-	background-color:$white;
+
+.picture_card{
+	//-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	background-size:cover;
 	overflow:hidden;
-    color:$primary;
-    
-    h2{
-        font-size:35px;
-    }
-    p{
-        margin-top:12px;
-        font-size:20px
-    }
-    .col-xs-12{
-        padding-bottom:50px;
-        padding-top:50px;
-        margin:0 auto;
-        
-    }
-    
-    .text-container{
-        min-height:0px;
-    }
-    
-    .image-container{
-        padding: 0;
-        text-align:center;
-        
-        img{
-            max-height:300px;
-            width:auto;
-            transform: scale(1);
-            transition: 0.4s ease-in-out;
-            &:hover{
-                transform:scale(1.02);
-                transition: 0.2s ease-in-out;
-            }
-            
-        }
-    }
-   
+	text-align: center;
+	transition:0.2s ease-in-out;
+
+	.text{
+		opacity:1;
+		transition:0.5s ease-in-out;
+		vertical-align: middle;
+		text-decoration: none;
+		color:black;
+	}
+	&:hover{
+		-webkit-filter: grayscale(0%);
+		-moz-filter: grayscale(0%);
+		-ms-filter: grayscale(0%);
+		-o-filter: grayscale(0%);
+		transition:0.5s ease-in-out;
+		transform:scale(1.1);
+		.text{
+			opacity: 1;
+			transition:0.5s ease-in-out;
+		}
+	}
+}
+
+.projects{
+	a{
+		color:inherit;
+		text-decoration: none;
+	}
+	.col-xs-12{
+		height:400px;
+	}
+	.full_card{
+		height:400px;
+		overflow:hidden;
+	}
+	.transport{
+		height:100%;
+		width:100%;
+		background:url('../../public/img/Transportplanering.png') no-repeat center center;
+		background-size:cover;
+
+	}
+	.half_card{
+		height:200px;
+		overflow:hidden;
+	}
+	.kahls{
+		background:url('../../public/img/Kahls.png') no-repeat center center;
+		background-size:cover;
+		height:100%;
+
+	}
+	.quarter_card{
+		height:200px;
+		overflow:hidden;
+		width:50%;
+		float:left;
+	}
+	.produktionsplanering{
+		background:url('../../public/img/Produktionsplanering.png') no-repeat center center;
+		color:white;
+		height:100%;
+		background-size:cover;
+	}
+	.computer{
+		background:url('../../public/img/Dator.png') no-repeat center center;
+		height:100%;
+		background-size:cover;
+	}
 }
 
 .contact{
-	background-color:$primary;
-    color:white;
-    line-height:25px;
-    .contact-container{
-        padding:80px 0 60px 0;
-    }
+	.text-wrapper{
+		text-align:center;
+
+		h2{
+			font-weight:300;
+		}
+	}
+
+	h2,p{
+		padding: 10px 40px;
+	}
+
+	.email{
+		h3{
+			font-weight: 700;
+		}
+	}
+	.phone{
+		h3{
+			font-weight:300;
+		}
+	}
+
+	.line-wrapper{
+		position: relative;
+
+		.line{
+			width:200px;
+			margin:0 auto;
+			border-bottom:1px black solid;
+		}
+	}
 }
 
-
-@media screen and(max-width:530px){
-    .content{
-        width:500px;
-    }
+.footer{
+	.col-xs-12{
+		background-color: rgba(0,0,0,.7);
+		height:40px;
+		color:white;
+	}
 }
