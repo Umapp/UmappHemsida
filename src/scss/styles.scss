@@ -1,229 +1,181 @@
-$white:#ffffff;
-
-html, body{
-	margin: 0 auto;
-	padding: 0;
-	overflow-x: hidden;
-	font-family:'Poppins';
+$white: #ffffff;
+$blue: #1F5673;
+$lightgrey: rgba(216,216,216,0.16);
+$red: #E85158;
+$lightwhite: rgba(255,255,255,0.72);
+html,
+body {
+  margin: 0 auto;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Roboto';
 }
-
-h1,h2,h3,h4,h5{
-	font-family: 'Poppins';
+p {
+  font-size: 18px;
+  font-weight: 300;
 }
-
-.banner{
-	width:100%;
-	height:800px;
-	background: url('../../public/img/umappbanner.png') no-repeat center center;
-	background-size:cover;
-	float:left;
-	padding-top:1em;
-
-	.wrapper{
-
-	}
-
-	.text-wrapper{
-		padding-top:150px;
-		padding-left: 100px;
-		padding-right:100px;
-		color:white;
-	}
-
-	ul{
-		font-size:1.2em;
-		color:$white;
-		text-align:right;
-
-		li{
-
-			margin-left:3em;
-			display:inline;
-			&:first-child{
-				margin-left:0;
-			}
-		}
-	}
-
-	.logo{
-		width:120px;
-		height:60px;
-		display:table;
-		border:3px $white solid;
-		text-align: center;
-		h3{
-			display:table-cell;
-			color:$white;
-			vertical-align: middle;
-		}
-	}
+h3 {
+  color: $blue;
 }
-
-.description{
-	.picture, .text{
-		height:400px;
-	}
-	.picture{
-		background:url('../../public/img/People.png') no-repeat center center;
-	}
-	.text{
-		text-align:center;
-		font: 'Yantramanav'
-	}
-	.text-wrapper{
-		padding: 10px 0;
-		height:100%;
-		position: relative;
-	}
-	h2,p{
-		padding:0 40px;
-	}
-	p{
-		padding-top:15px;
-		font-size:0.9em;
-	}
-	.contactbutton{
-		display:table;
-		border: 3px solid black;
-		width:200px;
-		height:50px;
-		float:none;
-		margin-left: auto;
-		margin-right:auto;
-		bottom:25px;
-		left: 0;
-		right:0;
-		position:absolute;
-		&:hover{
-			cursor:pointer;
-		}
-		h3{
-			vertical-align: middle;
-			display:table-cell;
-			font-size:1.4em;
-		}
-	}
+.btn {
+  border-radius: 25px;
+  padding: 10px;
+  border: 0;
 }
-
-
-.picture_card{
-	//-webkit-filter: grayscale(100%);
-	-moz-filter: grayscale(100%);
-	-ms-filter: grayscale(100%);
-	-o-filter: grayscale(100%);
-	background-size:cover;
-	overflow:hidden;
-	text-align: center;
-	transition:0.2s ease-in-out;
-
-	.text{
-		opacity:1;
-		transition:0.5s ease-in-out;
-		vertical-align: middle;
-		text-decoration: none;
-		color:black;
-	}
-	&:hover{
-		-webkit-filter: grayscale(0%);
-		-moz-filter: grayscale(0%);
-		-ms-filter: grayscale(0%);
-		-o-filter: grayscale(0%);
-		transition:0.5s ease-in-out;
-		transform:scale(1.1);
-		.text{
-			opacity: 1;
-			transition:0.5s ease-in-out;
-		}
-	}
+.btn-primary {
+  background-color: $red;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    transition: 0.4s ease-in-out;
+    background-color: $blue;
+  }
 }
-
-.projects{
-	a{
-		color:inherit;
-		text-decoration: none;
-	}
-	.col-xs-12{
-		height:400px;
-	}
-	.full_card{
-		height:400px;
-		overflow:hidden;
-	}
-	.transport{
-		height:100%;
-		width:100%;
-		background:url('../../public/img/Transportplanering.png') no-repeat center center;
-		background-size:cover;
-
-	}
-	.half_card{
-		height:200px;
-		overflow:hidden;
-	}
-	.kahls{
-		background:url('../../public/img/Kahls.png') no-repeat center center;
-		background-size:cover;
-		height:100%;
-
-	}
-	.quarter_card{
-		height:200px;
-		overflow:hidden;
-		width:50%;
-		float:left;
-	}
-	.produktionsplanering{
-		background:url('../../public/img/Produktionsplanering.png') no-repeat center center;
-		color:white;
-		height:100%;
-		background-size:cover;
-	}
-	.computer{
-		background:url('../../public/img/Dator.png') no-repeat center center;
-		height:100%;
-		background-size:cover;
-	}
+nav {
+  margin-right: 50px;
+  margin-top: 10px;
+  float: right;
+  li {
+    float: right;
+    font-size: 20px;
+    font-weight: 500;
+    padding-right: 50px;
+    color: $white;
+    display: inline;
+  }
 }
-
-.contact{
-	.text-wrapper{
-		text-align:center;
-
-		h2{
-			font-weight:300;
-		}
-	}
-
-	h2,p{
-		padding: 10px 40px;
-	}
-
-	.email{
-		h3{
-			font-weight: 700;
-		}
-	}
-	.phone{
-		h3{
-			font-weight:300;
-		}
-	}
-
-	.line-wrapper{
-		position: relative;
-
-		.line{
-			width:200px;
-			margin:0 auto;
-			border-bottom:1px black solid;
-		}
-	}
+.contact-button {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 40px;
+  font-weight: 300;
+  font-size: 29px;
 }
-
-.footer{
-	.col-xs-12{
-		background-color: rgba(0,0,0,.7);
-		height:40px;
-		color:white;
-	}
+.banner {
+  width: 100%;
+  height: 800px;
+  background: url('../../public/img/Banner2.svg') no-repeat center center;
+  background-size: cover;
+  a {
+    text-decoration: none;
+    color: $white;
+    &:hover {
+      color: $red;
+    }
+  }
+  h1 {
+    margin: 0;
+  }
+  h2 {
+    font-size: 40px;
+    color: $red;
+    padding-bottom: 60px;
+  }
+  p {
+    color: white;
+    font-size: 20px;
+  }
+  .company-info {
+    position: absolute;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 15%;
+    text-align: center;
+    h1 {
+      color: $white;
+      font-size: 60px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+}
+.sec1,
+.sec2,
+.sec3 {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+.sec1 {
+  padding-top: 45px;
+}
+.sec2 {
+  background-color: $lightgrey;
+  text-align: center;
+  .description {
+    padding-bottom: 10px;
+  }
+}
+.sec3 {
+  .image {
+    position: relative;
+    width: 100%;
+    p {
+      padding-left:25px;
+      padding-right:25px;
+      opacity: 0;
+      top:200px;
+      transition: all 0.2s ease-in-out;
+    }
+    &:hover {
+      p {
+        transition: all 0.5s ease-in-out;
+        transform: translateY(50);
+        top:170px;
+        opacity: 1;
+      }
+      h3 {
+        opacity:0;
+      }
+    }
+  }
+  h3,
+  p {
+    transition:all 0.3s ease-in-out;
+    position: absolute;
+    top: 230px;
+    left: 0;
+    width: 100%;
+    color: $white;
+    font-weight: 300;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  p {
+    top: 180px;
+  }
+  img {
+    margin-top: 15px;
+    width: 350px;
+    transition: all 0.2s;
+    &:hover {
+      transition: all 0.5s;
+      transform: scale(1.1);
+    }
+  }
+}
+.footer {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  height: 200px;
+  width: 100%;
+  background-color: $blue;
+  text-align: center;
+  h3,
+  p {
+    color: $white;
+  }
+  .footer-left {}
+}
+.info-cards {
+  padding: 0 25px;
+  text-align: center;
 }
