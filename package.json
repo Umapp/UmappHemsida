@@ -10,6 +10,8 @@
     "body-parser": "*"
   },
   "devDependencies": {
-    "lite-server": "^2.1.0"
+    "lite-server": "^2.1.0",
+    "gulp-sass":"2.2.0",
+    "gulp-watch": "*"
   }
 }
